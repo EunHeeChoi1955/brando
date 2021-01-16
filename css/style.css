@@ -144,7 +144,7 @@
 #wrap #main #section05{width:100%; height:auto;}
 #wrap #main #section05 .wrap{width:100%;max-width:1170px;margin:0 auto;height:100%;}
 #wrap #main #section05 .wrap .gap{width:100%;}
-#wrap #main #section05 .wrap .gap .container{width:100%;height:860px;/* 임시높이 */}
+#wrap #main #section05 .wrap .gap .container{width:100%;height:auto;}
 /* 공용 타이틀 */
 
 /* 섹션5 컨텐츠 왼쪽 */
@@ -241,7 +241,7 @@
 
  
 /* 섹션8  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */
-#wrap #main #section08{width:100%;height:auto;padding:8.831319% 0;background:url(../img/restaurant-img24.jpg)no-repeat 50% 0 fixed;background-size:cover;}
+#wrap #main #section08{width:100%;height:auto;background:url(../img/restaurant-img24.jpg)no-repeat 50% 0 fixed;background-size:cover;}
 #wrap #main #section08 .wrap{width:100%;max-width:1170px;height:auto;margin:0 auto;}
 #wrap #main #section08 .wrap .gap{width:100%;height:100%;margin:0;}
 #wrap #main #section08 .wrap .gap .container{width:100%;}
@@ -274,10 +274,35 @@
 
  
 /* 섹션9  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */
-#wrap #main #section09{width:100%;height:auto;padding:130px 0;}
+#wrap #main #section09{width:100%;height:auto;}
 #wrap #main #section09 .wrap{width:100%;height:auto;}
 #wrap #main #section09 .wrap .gap{width:100%;height:100%;}
-#wrap #main #section09 .wrap .gap .container{height:932px;/* 임시 */width:100%;}
+#wrap #main #section09 .wrap .gap .container{width:100%;}
+
+#wrap #main #section09 .wrap .gap .container #sec09nav{}
+#wrap #main #section09 .wrap .gap .container #sec09nav ul{}
+#wrap #main #section09 .wrap .gap .container #sec09nav ul li{}
+#wrap #main #section09 .wrap .gap .container #sec09nav ul li a{}
+#wrap #main #section09 .wrap .gap .container #sec09nav ul li a i{}
+
+
+#wrap #main #section09 .wrap .gap .container .content{width:100%;height:auto;}
+#wrap #main #section09 .wrap .gap .container .content ul{with:100%;height:auto;}
+#wrap #main #section09 .wrap .gap .container .content ul li{float:left;width:25%;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap{width:100%;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box{width:100%;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-box{width:100%;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-box a{display: inline-block;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-box a img{width:100%;}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-caption{width:100%;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-caption .caption-gap{padding:30px 0 40px 0;text-align:center;font-family: 'Montserrat';color: #000000;background:#fff;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-caption .caption-gap h3{font-size: 15px;font-weight: 600;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-caption .caption-gap h4{font-size: 11px;font-weight: 500;}
+
+
+
+
 
 /* 섹션10  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */
 #wrap #main #section10{width:100%;height:auto;padding:130px 0;background:#c99;/* 임시 */}
@@ -286,12 +311,31 @@
 #wrap #main #section10 .wrap .gap .container{height:268px;/* 임시 */width:100%;}
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* 섹션11  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */
 #wrap #main #section11{z-index:1;position:relative;width:100%;height:auto;padding:130px 0;background:url(../img/slider-img6.jpg)no-repeat 50% 0 fixed;background-size:cover;}
 #wrap #main #section11::after{z-index:2;position:absolute;left:0;top:0;content:'';display:block;width:100%;height:100%;background: #252525;opacity:.8;}
 #wrap #main #section11 .wrap{z-index:3;position:relative;width:100%;height:auto;}
 #wrap #main #section11 .wrap .gap{margin:0 15px;}
 #wrap #main #section11 .wrap .gap .container{height:625px;/* 임시 */width:100%;}
+/* 섹션11 타이틀 글자 색 바꾸기 */
+#wrap #main #section11 .wrap .gap .container .title h2{color:#fff;}
+
+
+
+
+
+
 
 
 
@@ -300,6 +344,17 @@
 #wrap #main #section12 .wrap{width:100%;max-width:1170px;;height:auto;margin:0 auto;}
 #wrap #main #section12 .wrap .gap{margin:0 15px;}
 #wrap #main #section12 .wrap .gap .container{height:187px;/* 임시 */width:100%;}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 섹션13  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */

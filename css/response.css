@@ -35,7 +35,7 @@
 }
 
 @media all and (max-width:980px){
-    #wrap #main section .wrap .gap .container .title{padding-top:130px;}
+   
     
    #wrap #header .wrap .gap .container .right-wrap  { display: none; }
    #wrap #header .wrap .gap .container .left-wrap #gnb  { display: none; }  /* 메뉴왼쪽사라짐 */
@@ -47,10 +47,12 @@
    #wrap #main #section04 .wrap .gap .container .box{right:50%;margin-right:-225px;}
    #wrap #main #section03 .wrap .gap .container .box{left:50%;margin-left:-225px;}
 
-   #wrap #main .section{padding:30% 0;}
+
    #wrap #main #section06 .wrap .gap .container .content .gallery .col{ width:100%; }
    #wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-img .content-box > ul > li > div{padding:4.8%;}
 
+     /* 섹션 7 패딩 바꿔주기 */
+     #wrap #main #section07{padding:15% 0 0 0;}
    #wrap #main #section07 .wrap .gap .container .content .chef-profile li{width:50%;}
    #wrap #main #section07 .wrap .gap .container .content .chef-profile li .profile-gap .profile-box{margin-left:-38%;width:76%;}
    #wrap #main #section07 .wrap .gap .container .content .chef-profile li .profile-gap .profile-box .text-gap{padding:12%;}
@@ -80,12 +82,12 @@
 
 @media all and (max-width:780px){
     /* 제목위 패딩값 */
-    #wrap #main .section{padding:8.831319% 0;/* 130px 0 */}
-
+    #wrap #main section{padding:15% 0;/* 130px 0 */}
+    
     #wrap #main #section05 .wrap .gap .container .content .left{float:none;width:100%;}
-    #wrap #main #section05 .wrap .gap .container .content .right{float:none;width:80%;margin:0 auto;/* 텍스트너비 줄이고 가운데정렬 */text-align:center;}
+    #wrap #main #section05 .wrap .gap .container .content .right{float:none;width:80%;margin:0 auto;/* 텍스트너비 줄이고 가운데정렬 */text-align:center;padding-bottom:100px;}
     #wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap h3{font-size:30px;}
-
+  
     
 }
 @media all and (max-width:760px){
