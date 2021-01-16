@@ -241,11 +241,32 @@
 
  
 /* 섹션8  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */
-#wrap #main #section08{width:100%;height:auto;padding:6.831319% 0;background:url(../img/restaurant-img24.jpg)no-repeat 50% 0 fixed;background-size:cover;}
-#wrap #main #section08 .wrap{width:100%;height:auto;}
-#wrap #main #section08 .wrap .gap{width:100%;height:100%;}
-#wrap #main #section08 .wrap .gap .container{height:582px;/* 임시 */width:100%;}
+#wrap #main #section08{width:100%;height:auto;padding:8.831319% 0;background:url(../img/restaurant-img24.jpg)no-repeat 50% 0 fixed;background-size:cover;}
+#wrap #main #section08 .wrap{width:100%;max-width:1170px;height:auto;margin:0 auto;}
+#wrap #main #section08 .wrap .gap{width:100%;height:100%;margin:0;}
+#wrap #main #section08 .wrap .gap .container{width:100%;}
 
+#wrap #main #section08 .wrap .gap .container .content-wrap{width:100%;}
+#wrap #main #section08 .wrap .gap .container .content-wrap h2{width:100%;margin:0 auto;text-align: center;}
+#wrap #main #section08 .wrap .gap .container .content-wrap h2 img{width:100%;max-width:483px;}
+
+#wrap #main #section08 .wrap .gap .container .content-wrap ul{width:100%;padding-top:100px;}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li{float: left;width:33.3333%;/*반응형 줄였을때 음식사진들 간의 공간 띄우기 */}
+
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap{margin:0 15px;}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap{width:100%;position: relative;max-width:289px;margin:0 auto;}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .img-wrap{z-index:1;position: relative;transition:all .5s;width:100%;margin:0 auto;}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .img-wrap:hover{transform: scale(1.1, 1.1);}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .img-wrap img{width:100%;}
+
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .price-wrap{z-index:2;position: absolute;top:0;right:0;width:90px; height:90px;border-radius:50%;background: #dc3535;text-align:center;}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .price-wrap div{padding-top:28px;font-family:'Montserrat';}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .price-wrap div h5{font-size:11px; color:#fff;padding-bottom:5px;font-weight:500;}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .price-wrap div h4{font-size:18px; color:#fff;font-weight:500;}
+
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .img-caption{width:100%;text-align:center;font-family:'Montserrat';}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .img-caption h3{font-size:18px; color:#fff;font-weight:500;padding-bottom:13px;padding-top:35px;}
+#wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap .img-caption h4{font-size:11px; color:#ababab;font-weight:600;}
 
 
 
