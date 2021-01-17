@@ -1,0 +1,427 @@
+ctrl+B  :  옆에 확장 탭 없어지고 생김
+확장프로그램에서 open in brower/ live server 설치하기
+
+ctrl+,   :  눌러서 ctrl 마우스 휠 적용시 확대 축소 할수 있음.
+▲작업시 마우스위에 창뜨지 않게 하려면 위 설정창에서
+ editor.hover를 검색해서 체크풀기.
+
+alt+B   :  누르면 크롬브라우저로 갈수있음.
+
+shift+ alt + a : <!---->
+
+css에서는 ctrl +/  : /* */
+
+shift + alt + ctrl : 글자여러개 수정할때
+
+ctrl+ H : 한번에 바꿀때 사용 
+
+
+
+
+h2{Discover our tasty meals}^h3>img
+
+섹션09 이미지내용 만들때ㄴ
+div.content>ul>li*8>div.gallery-gap>div.box>div.img-box>img[src=./img/restaurant-img25.jpg]^div.img-caption>div.caption-gap>h3+h4
+
+
+
+
+
+----------------------<깃허브 작동방법>-----------------------------
+
+git bash -> 구글에 쳐서 설치
+https://git-scm.com/
+new-> 이름적고 ->public-> create repositiory
+
+D드라이브 -> 폴더생성(파일이름 brando적고) -> 해당 넣고싶은 퍼블리싱파일 넣기 (이전에 만든 .git 파일 들어있는 폴더 복사하면 안됌!)
+보기->숨김파일 체크 해야 .git 파일이 보여짐
+
+
+
+------------------------------------------------------------------
+gitbash프로그램 켜서 
+$ cd brando 엔터-> $ ls -l 엔터->$ git init 엔터
+
+
+
+TJ@1304-02 MINGW64 ~
+$ cd d: (d드라이브 찾아라)
+
+TJ@1304-02 MINGW64 /d
+$ ls -l
+total 936
+drwxr-xr-x 1 TJ 197121      0 Nov  7 10:06 '$RECYCLE.BIN'/
+drwxr-xr-x 1 TJ 197121      0 Nov  4 20:36  KcLepDB/
+drwxr-xr-x 1 TJ 197121      0 Oct 20 11:15 'System Volume Information'/
+drwxr-xr-x 1 TJ 197121      0 Oct 11 13:58  Temp/
+-rwxr-xr-x 1 TJ 197121   1382 Oct 16 08:43  ee.lnk*
+drwxr-xr-x 1 TJ 197121      0 Jan 16 10:22  github/
+-rw-r--r-- 1 TJ 197121  36265 Nov  6 12:30  mouse.png
+-rwxr-xr-x 1 TJ 197121 904704 Dec  1  2006  msdia80.dll*
+drwxr-xr-x 1 TJ 197121      0 Jan 16 10:06  주말반_최은희/
+
+
+TJ@1304-02 MINGW64 /d
+$ cd github	
+(rest파일이나 다른 만들어서 경로에 넣고싶을때 항상 github폴더가 먼저생성됐으니 먼저 찾아주기)
+
+TJ@1304-02 MINGW64 /d/github
+$ pwd (현재위치)
+/d/github
+-------------------------- rest파일 찾기----------------------------
+TJ@1304-02 MINGW64 /d/github (master)
+$ cd rest   (github파일 안에 rest파일 찾고싶을때)
+
+TJ@1304-02 MINGW64 /d/github/rest (master) (파일rest찾아서 변함)
+$ git init
+Initialized empty Git repository in D:/github/rest/.git/
+
+----------------------------------------------------------------------
+
+TJ@1304-02 MINGW64 /d/github
+$ ls (지금 github폴더안에 내용들 뭐있는지 나옴)
+brando/
+
+TJ@1304-02 MINGW64 /d/github
+$ cd brando (브란도 파일 찾아라)
+
+TJ@1304-02 MINGW64 /d/github/brando
+$ ls -l (브란도 파일안에 있는 내용들 자세하게 묘사)
+total 56
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 css/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 fonts/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 img/
+-rw-r--r-- 1 TJ 197121 44115 Jan 16 10:11 index.html
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 js/
+
+
+
+TJ@1304-02 MINGW64 /d/github/brando
+$ git init (.git 설정 초기화)
+Initialized empty Git repository in D:/github/brando/.git/
+
+
+
+TJ@1304-02 MINGW64 /d/github/brando
+$ clear (화면청소)
+
+
+------------------------------------------------------
+작업폴더 생성하기
+github\brando\퍼블리싱 한 파일복사 붙이기
+
+
+
+
+///////////숨긴일반목록안보임 -l //////////////
+
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ ls -l
+total 56
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 css/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 fonts/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 img/
+-rw-r--r-- 1 TJ 197121 44115 Jan 16 10:11 index.html
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 js/
+
+
+
+/////////// 숨긴 목록이 보임 -la //////////////
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ ls -la  (내가 만든brando파일에 뭐가 들었는짖 상세히 보여줌)
+total 64
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:41 ./
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 ../
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:41 .git/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 css/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 fonts/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 img/
+-rw-r--r-- 1 TJ 197121 44115 Jan 16 10:11 index.html
+drwxr-xr-x 1 TJ 197121     0 Jan 16 10:22 js/
+
+
+
+////////////사용자 이메일(email), 이름(name) 정보 환경 설정 입력//////////////////////////
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ git config --global user.email 'med20001955@naver.com' (내 메일 입력)
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ git config --global user.name 'EunHeeChoi1955'  (아이디 입력)
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ git remote add origin https://github.com/EunHeeChoi1955/brando.git (내주소 입력해야함)
+
+
+///////---------우분투(리눅스)에서 원격으로 리포지토리에 접속하기-------//////////
+
+$ git remote add origin 리포지토리 복사된url 오른쪽마우스past (붙이기)
+$ git remote add origin  https://github.com/EunHeeChoi1955/brando.git
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ git remote -v	(verify하기)
+origin  https://github.com/EunHeeChoi1955/brando.git (fetch)
+origin  https://github.com/EunHeeChoi1955/brando.git (push)
+
+
+
+
+
+////////////////add 스테이징 올리기///////////
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ git add .	 ( .은 or과 같은것 앞에 띄어쓰기 꼭 해주기)
+warning: LF will be replaced by CRLF in js/lib/jquery.touchSwipe.js.
+The file will have its original line endings in your working directory
+
+
+
+
+/////////////-comit-스테이징과 리포지토리 변경사항 점검 상태///////////////////
+
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ git commit -m 'brando homepage upload' (나중에 뭐 올리면 업로드햇다는 메세지 뜸)
+[master (root-commit) efd6b59] brando homepage upload
+ 91 files changed, 6497 insertions(+)
+ create mode 100644 css/common.css
+ create mode 100644 css/fonts.css
+ create mode 100644 css/response.css
+ create mode 100644 css/style.css
+ create mode 100644 fonts/dh/DINWebPro-CondBold.woff
+ create mode 100644 fonts/dh/DINWebPro-Medium.woff
+ create mode 100644 fonts/dh/DINWebPro.woff
+ create mode 100644 fonts/dh/Plantin-Italic.woff
+ create mode 100644 fonts/dh/Plantin.woff
+ create mode 100644 fonts/dh/oe-icons.eot
+ create mode 100644 fonts/dh/oe-icons.svg
+ create mode 100644 fonts/dh/oe-icons.ttf
+ create mode 100644 fonts/dh/oe-icons.woff
+ create mode 100644 fonts/et-line.eot
+ create mode 100644 fonts/et-line.svg
+ create mode 100644 fonts/et-line.ttf
+ create mode 100644 fonts/et-line.woff
+ create mode 100644 img/Thumbs.db
+ create mode 100644 img/ajax-loader.gif
+ create mode 100644 img/arrow-down.png
+ create mode 100644 img/blog-post-img4.jpg
+ create mode 100644 img/blog-post-img5.jpg
+ create mode 100644 img/blog-post-img6.jpg
+ create mode 100644 img/blog-post-img7.jpg
+ create mode 100644 img/brando-32x32-1.png
+ create mode 100644 img/cupcakes-690040_1920.jpg
+ create mode 100644 img/hungry.png
+ create mode 100644 img/icon-breakfast.png
+ create mode 100644 img/icon-lunch.png
+ create mode 100644 img/icon-move.png
+ create mode 100644 img/icon-zoom-out.png
+ create mode 100644 img/icon-zoom.png
+ create mode 100644 img/logo-restaurant-footer.png
+ create mode 100644 img/logo-restaurant.png
+ create mode 100644 img/pasta-1181189_1920.jpg
+ create mode 100644 img/raspberry-2023404_1920.jpg
+ create mode 100644 img/restaurant-img1.jpg
+ create mode 100644 img/restaurant-img10.jpg
+ create mode 100644 img/restaurant-img11.jpg
+ create mode 100644 img/restaurant-img12.jpg
+ create mode 100644 img/restaurant-img14.jpg
+ create mode 100644 img/restaurant-img15.jpg
+ create mode 100644 img/restaurant-img16.jpg
+ create mode 100644 img/restaurant-img17.jpg
+ create mode 100644 img/restaurant-img18.jpg
+ create mode 100644 img/restaurant-img2.jpg
+ create mode 100644 img/restaurant-img20.jpg
+ create mode 100644 img/restaurant-img21.jpg
+ create mode 100644 img/restaurant-img22.jpg
+ create mode 100644 img/restaurant-img23.jpg
+ create mode 100644 img/restaurant-img24.jpg
+ create mode 100644 img/restaurant-img25.jpg
+ create mode 100644 img/restaurant-img26.jpg
+ create mode 100644 img/restaurant-img27.jpg
+ create mode 100644 img/restaurant-img28.jpg
+ create mode 100644 img/restaurant-img29.jpg
+ create mode 100644 img/restaurant-img3.jpg
+ create mode 100644 img/restaurant-img30.jpg
+ create mode 100644 img/restaurant-img31.jpg
+ create mode 100644 img/restaurant-img32.jpg
+ create mode 100644 img/restaurant-img33.png
+ create mode 100644 img/restaurant-img34.png
+ create mode 100644 img/restaurant-img35.png
+ create mode 100644 img/restaurant-img36.png
+ create mode 100644 img/restaurant-img37.jpg
+ create mode 100644 img/restaurant-img38.jpg
+ create mode 100644 img/restaurant-img39.jpg
+ create mode 100644 img/restaurant-img4.jpg
+ create mode 100644 img/restaurant-img40.jpg
+ create mode 100644 img/restaurant-img41.jpg
+ create mode 100644 img/restaurant-img6.jpg
+ create mode 100644 img/restaurant-img7.jpg
+ create mode 100644 img/restaurant-img8.jpg
+ create mode 100644 img/restaurant-img9.jpg
+ create mode 100644 img/select-arrow.png
+ create mode 100644 img/separator.png
+ create mode 100644 img/separator2.png
+ create mode 100644 img/separator3.png
+ create mode 100644 img/shish-kebab-417994_1920.jpg
+ create mode 100644 img/slider-img4.jpg
+ create mode 100644 img/slider-img6.jpg
+ create mode 100644 index.html
+ create mode 100644 js/brando.js
+ create mode 100644 js/lib/IE9.js
+ create mode 100644 js/lib/PIE.js
+ create mode 100644 js/lib/html5shiv.min.js
+ create mode 100644 js/lib/jqPIE.js
+ create mode 100644 js/lib/jquery-1.12.4.min.js
+ create mode 100644 js/lib/jquery.easing.1.3.js
+ create mode 100644 js/lib/jquery.touchSwipe.js
+ create mode 100644 js/lib/prefixfree.min.js
+
+
+////////////////////////////////////push-스테이징에 변경된 파일들을 리포지토리에 업로드/////////////////////// 
+
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ git push origin master
+fatal: 응답 상태 코드가 성공을 나타내지 않습니다. 401(Unauthorized).
+Enumerating objects: 99, done.
+Counting objects: 100% (99/99), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (99/99), done.
+Writing objects: 100% (99/99), 7.94 MiB | 1.66 MiB/s, done.
+Total 99 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/EunHeeChoi1955/brando.git
+ * [new branch]      master -> master
+
+끝!
+깃허브 웹사이트 리포지토리에 업로드 된 내용들 확인하기
+
+
+
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ git push origin master (메세지 창이 뜨면 github에 등록한 아이디랑 비밀번호 입력하면 끝!)
+
+이후 github에 내가 올린게 올라감!
+
+github에서 내가 만든 폴더에 들어가서 스크롤 내려서[github pages] 찾기
+source에서 화살표 눌러서 master누르고 그 위에 파랑글씨로 주소 복사 (save누르면 되는데 아직 누르지 말기)
+https://eunheechoi1955.github.io/brando/.
+
+
+--------------------------------------------------------------------------------------------------
+
+<집에서 github내가 한 작업다운받기 >
+
+:D드라이브에 폴더를 만들어준다
+이름을 '210116_브란도_레스토랑_반응형포트폴리오'이렇게 넣고
+여기 폴더로 들어와서  폴더이름 나와있는 상단에 클릭 한번하면 파랑색으로 글씨 바뀌면 오른쪽 클릭후 '복사'
+D:\주말반_최은희\210116_브란도_레스토랑_반응형포트폴리오   이렇게 나옴
+
+이후
+
+gitbash에서
+
+
+
+TJ@1304-02 MINGW64 /d/github/brando (master)
+$ cd d:	(D드라이브 찾아라 )
+
+TJ@1304-02 MINGW64 /d (master)
+$ cd D:/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오  (내가 만든 폴더 찾아라)
+
+TJ@1304-02 MINGW64 /d/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오 (master)
+$ ls -la
+total 4
+drwxr-xr-x 1 TJ 197121 0 Jan 16 12:29 ./
+drwxr-xr-x 1 TJ 197121 0 Jan 16 12:29 ../
+
+TJ@1304-02 MINGW64 /d/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오 (master)
+$ git clone https://github.com/EunHeeChoi1955/brando.git (내가 복제하고 싶은 깃헙 주소넣고 복제 )
+Cloning into 'brando'...
+remote: Enumerating objects: 99, done.
+remote: Counting objects: 100% (99/99), done.
+remote: Compressing objects: 100% (98/98), done.
+remote: Total 99 (delta 1), reused 99 (delta 1), pack-reused 0
+Receiving objects: 100% (99/99), 7.94 MiB | 4.36 MiB/s, done.
+Resolving deltas: 100% (1/1), done.
+
+TJ@1304-02 MINGW64 /d/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오 (master)
+$ ls -la
+total 4
+drwxr-xr-x 1 TJ 197121 0 Jan 16 12:31 ./
+drwxr-xr-x 1 TJ 197121 0 Jan 16 12:29 ../
+drwxr-xr-x 1 TJ 197121 0 Jan 16 12:31 brando/
+
+TJ@1304-02 MINGW64 /d/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오 (master)
+$ cd brando	(브란도 파일 찾아라)
+
+TJ@1304-02 MINGW64 /d/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오/brando (master)
+$ ls -la
+total 60
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:31 ./
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:31 ../
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:31 .git/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:31 css/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:31 fonts/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:31 img/
+-rw-r--r-- 1 TJ 197121 44115 Jan 16 12:31 index.html
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:31 js/
+
+TJ@1304-02 MINGW64 /d/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오/brando 
+
+
+
+--------------------------------------------------------------------------------------------------
+/////////////////////[수정한거 github에 올릴때 방법]////////////////////////////////////////
+
+TJ@1304-02 MINGW64 /d/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오 (master)
+$ git add .
+
+TJ@1304-02 MINGW64 /d/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오 (master)
+$ git commit -m 'update'
+[master f7ccbdd] update
+ 3 files changed, 245 insertions(+), 42 deletions(-)
+
+TJ@1304-02 MINGW64 /d/주말반_최은희/210116_브란도_레스토랑_반응형포트폴리오 (master)
+$ git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 2.26 KiB | 2.26 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+
+//////////////////[visual studio에서 리포지토리 다운받아서 하기]///////////////////////////
+
+내가 다운받고 싶은 폴더 안에 경로를 복사한다
+D:\주말반_최은희
+
+visual studiod에서 파일을 모두 닫고 
+종이모양 눌러서  [리포지토리 복제] 클릭
+망원경 아이콘 안에 D:\주말반_최은희 이거 넣기 enter-> 내가 넣고싶은폴더 찾고 -> [리포지토리 위치선택] 클릭 ->다운받음 
+
+
+
+D:/주말반_최은희\210116_브란도_레스토랑_반응형포트폴리오
+
+
+--------------------------------------------------------------------------------------------------
+[깃허브 내가 만든 주소]
+https://github.com/EunHeeChoi1955/brando.git
+https://github.com/EunHeeChoi1955/rest.git
+
+상단 왼쪽 고양이버튼-> 처음으로 가기 
+
+
+공부할때 좋은 사이트
+https://developer.mozilla.org/ko/
