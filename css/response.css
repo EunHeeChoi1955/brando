@@ -59,7 +59,7 @@
    
    #wrap #main #section08{background-attachment:scroll;}/*배경이 너무큰걸 줄여줌*/
    #wrap #main #section08 .wrap .gap .container .content-wrap ul li{float: left;width:50%; margin:40px 0;/*반응형 줄였을때 음식사진들 간의 공간 띄우기 */}
-   #wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap{max-width:320px;}
+   #wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap{max-width:300px;}
 
 
 
@@ -92,13 +92,16 @@
 }
 @media all and (max-width:760px){
     
-   #wrap #main #section07 .wrap .gap .container .content .chef-profile li{width:100%;}
 
-   #wrap #main #section08 .wrap .gap .container .content-wrap{padding-top:100px;}
-   #wrap #main #section08 .wrap .gap .container .content-wrap h2 img{width:80%;}
+    
+   #wrap #main #section07 .wrap .gap .container .content .chef-profile li{float:none;width:100%;}
+
+   #wrap #main #section08 .wrap .gap .container .title{padding-top:50px;width:80%;margin:0 auto;}
+   #wrap #main #section08 .wrap .gap .container .title h2 img{width:80%;}
    #wrap #main #section08 .wrap .gap .container .content-wrap ul li .img-gap .box-wrap{width:80%;}
+   #wrap #main #section08 .wrap .gap .container .content-wrap ul li {float:none;width:100%;}
  
-   #wrap #main #section08 .wrap .gap .container .content-wrap ul li{width:100%;}
+
 }
 
 

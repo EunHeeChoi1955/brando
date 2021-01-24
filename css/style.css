@@ -226,7 +226,7 @@
  #wrap #main #section07 .wrap .gap .container .content .chef-profile li .profile-gap.addProfile img{z-index:1;position:relative;width:100%;transform:scale(1.15);filter:blur(3px);/* 흐림효과 */opacity:.6;}
 
  /* 섹션7  프로필 텍스트박스 */
- #wrap #main #section07 .wrap .gap .container .content .chef-profile li .profile-gap .profile-box{z-index:2;position:absolute;opacity:0;bottom:-150%;left:50%;margin-left:36.1189007%/* -161px/445.750px=0.361189007% */;width:72.2378015%/* 322px/445.750=0.722378015%*/;transition:all .4s ease-in-out;background:#614c45;}
+ #wrap #main #section07 .wrap .gap .container .content .chef-profile li .profile-gap .profile-box{z-index:2;position:absolute;opacity:0;bottom:-150%;left:50%;margin-left:-36.1189007%/* -161px/445.750px=-0.361189007% */;width:72.2378015%/* 322px/445.750=0.722378015%*/;transition:all .4s ease-in-out;background:#614c45;}
  #wrap #main #section07 .wrap .gap .container .content .chef-profile li .profile-gap.addProfile .profile-box{bottom:8.7245722%/* 50px/573.094=0.087245722%*/;opacity:1;}
  #wrap #main #section07 .wrap .gap .container .content .chef-profile li .profile-gap .profile-box .text-gap{padding:12.4223602%/* 40px/322px=0.124223602% */;}
  #wrap #main #section07 .wrap .gap .container .content .chef-profile li .profile-gap .profile-box .text-gap .text-wrap{width:100%;text-align:center;line-height:200%;}
@@ -243,12 +243,12 @@
 /* 섹션8  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */
 #wrap #main #section08{width:100%;height:auto;background:url(../img/restaurant-img24.jpg)no-repeat 50% 0 fixed;background-size:cover;}
 #wrap #main #section08 .wrap{width:100%;max-width:1170px;height:auto;margin:0 auto;}
-#wrap #main #section08 .wrap .gap{width:100%;height:100%;margin:0;}
-#wrap #main #section08 .wrap .gap .container{width:100%;}
+#wrap #main #section08 .wrap .gap{width:100%;height:auto;margin:0;}
+#wrap #main #section08 .wrap .gap .container{width:100%;height:auto;}
 
-#wrap #main #section08 .wrap .gap .container .content-wrap{width:100%;}
-#wrap #main #section08 .wrap .gap .container .content-wrap h2{width:100%;margin:0 auto;text-align: center;}
-#wrap #main #section08 .wrap .gap .container .content-wrap h2 img{width:100%;max-width:483px;}
+#wrap #main #section08 .wrap .gap .container .title{width:100%;}
+#wrap #main #section08 .wrap .gap .container .title h2{text-align: center;}
+#wrap #main #section08 .wrap .gap .container .title h2 img{width:100%;max-width:483px;}
 
 #wrap #main #section08 .wrap .gap .container .content-wrap ul{width:100%;}
 #wrap #main #section08 .wrap .gap .container .content-wrap ul li{float: left;width:33.3333%;/*반응형 줄였을때 음식사진들 간의 공간 띄우기 */}
@@ -274,7 +274,7 @@
 
  
 /* 섹션9  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */
-#wrap #main #section09{width:100%;height:auto;}
+#wrap #main #section09{width:100%;height:auto;padding-bottom:0;}
 #wrap #main #section09 .wrap{width:100%;height:auto;}
 #wrap #main #section09 .wrap .gap{width:100%;height:100%;}
 #wrap #main #section09 .wrap .gap .container{width:100%;height:auto;}
@@ -295,14 +295,25 @@
 
 
 #wrap #main #section09 .wrap .gap .container .content{width:100%;height:auto;}
-#wrap #main #section09 .wrap .gap .container .content ul{width:100%;height:auto;display:flex;flex-flow:row wrap;}/* 갤러리 항목 묶어주는 박스(플랙스 컨테이너container) */
-#wrap #main #section09 .wrap .gap .container .content ul li{flex:1 1 25%;height:356.8125px;/*script 높이 = 너비* 0.75 */overflow:hidden;}/* 8개 항목(플랙스 항목item): 기본 가로로 4개씩 2행 배치  */
-#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap{width:100%;transition:margin-top 0.3s;}
-#wrap #main #section09 .wrap .gap .container .content ul li:hover .gallery-gap{margin-top:-106px;/* 후버시 -106만큼 올라감 */cursor: url(../img/icon-zoom.png), auto;}
-#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box{width:100%;}
-#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-box{width:100%;}
-#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-box a{display:block;}
+#wrap #main #section09 .wrap .gap .container .content ul{position:relative;width:100%;height:calc(356.8125px*2);/* 높이를 잡아줘야 section10이 안올라옴 */display:flex;flex-flow:row wrap;}/* 갤러리 항목 묶어주는 박스(플랙스 컨테이너container) */
+#wrap #main #section09 .wrap .gap .container .content ul li {position:absolute;flex:1 1 25%;/*script 높이 = (창너비1920-17px(스크롤바 너비)/4)* 0.75 */overflow:hidden;}/* 8개 항목(플랙스 항목item): 기본 가로로 4개씩 2행 배치  */
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(1) {width:475.75px; height:356.8125px; left:calc(475.75px*0); top:calc(356.8125px*0);  }
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(2) {width:475.75px; height:356.8125px; left:calc(475.75px*1); top:calc(356.8125px*0);  }
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(3) {width:475.75px; height:356.8125px; left:calc(475.75px*2); top:calc(356.8125px*0);  }
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(4) {width:475.75px; height:356.8125px; left:calc(475.75px*3); top:calc(356.8125px*0);  }
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(5) {width:475.75px; height:356.8125px; left:calc(475.75px*0); top:calc(356.8125px*1);  }
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(6) {width:475.75px; height:356.8125px; left:calc(475.75px*1); top:calc(356.8125px*1);  }
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(7) {width:475.75px; height:356.8125px; left:calc(475.75px*2); top:calc(356.8125px*1);  }
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(8) {width:475.75px; height:356.8125px; left:calc(475.75px*3); top:calc(356.8125px*1);  }
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap{width:100%;height:100%;transition:all .3s;transform:scale(0);}
+#wrap #main #section09 .wrap .gap .container .content ul li.addScale .gallery-gap{transform:scale(1);}
+#wrap #main #section09 .wrap .gap .container .content ul li:hover .gallery-gap{margin-top:-106px;/* 후버시 -106만큼 올라감 */}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box{width:100%;height:100%;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-box{width:100%;height:100%;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-box a{display:block;cursor: url(../img/icon-zoom.png), auto;}
 #wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-box a img{width:100%;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-box a img{width:100%;transition:opacity .3s;}
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-box a:hover img{width:100%;opacity:.6;}
 
 #wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-caption{position:relative;width:100%;background:#fff;}
 #wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-caption .caption-gap{z-index:1;position:relative;padding:30px 20px 40px 20px;text-align:center;font-family:'Montserrat';text-transform:uppercase;}
@@ -311,8 +322,96 @@
 
 #wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .gallery-gap-box .img-caption .caption-Btn {z-index:2;position:absolute;top:0;left:0;display:block;width:100%;height:100%;background: transparent;}
 
+/* 
+
+섹션9분석계획 설계 
+ 
+1.단계 : 갤러리 이미지 박스 블록과 레이아웃 박스 구성 배치 - FLEX
+2.단계 : 디자인(CSS) 콘텐츠의 효과 마우스 포인터, 투명도, 내비게이션 버튼 효과...
+ 
+
+3.단계 : 포지션(position:relative; absolute; top: left:) 속성을 넣어서 갤러리 이미지 박스 틀을 유동적으로 이동 삭제 수정 등 
+         애니메이션 다이나믹하게 이루어지게 만든다.
+         반응형으로 동작하도록 이미지박스 너비에 대한 높이 비율로 적용 되게한다.
+         액티비티 동작이 이루어지는 갤러리
+         이벤트는 내비게이션 버튼 클릭시 발생하고
+         화면 너비 변화에 따른 반응형 애니메이션 이루어진다.
+
+         포지션 지정 요소
+         부모요소 : gallery-container를 position:relative; 
+         자식요소 : gallery-item을 position:absolute;  
+        
+         자식요소의 포지션 : top left 위치를 너비에 따라서 반응하도록
+         자식요소의 너비 : 화면너비/칸수(해상도별 반응너비변경 1200px이상       4칸)
+         자식요소의 너비 : 화면너비/칸수(해상도별 반응너비변경 990px~1200px미만 3칸)
+         자식요소의 너비 : 화면너비/칸수(해상도별 반응너비변경 760px~990px미만  2칸)
+         자식요소의 너비 : 화면너비/칸수(해상도별 반응너비변경 0  ~  760px이하  1칸)
+         자식요소의 높이 : 
+         자식요소의 left : 너비변화에 따른 left값 결정
+                           ex) 화면너비가 이미지 박스 너비 1903/4 = 1903/4 = 475.75
+                           ex) 화면너비가 이미지 박스 높이 1903/4 = 475.75*.75
+                           
+
+                        // 4열인 경우 줄수는 8개이미지/4열 = 2행
+                        // 부모요소의$('gallery-container') 높이는 자식요소$('gallery-item')의 높이 356.8125*2줄수
+                           1행 1열 width:475.75; height:356.8125; left:475.75*0; top:356.8125*0;        
+                           1행 1열 width:475.75; height:356.8125; left:475.75*1; top:356.8125*0;
+                           1행 1열 width:475.75; height:356.8125; left:475.75*2; top:356.8125*0;        
+                           1행 1열 width:475.75; height:356.8125; left:475.75*3; top:356.8125*0;        
+                           
+                           2행 1열 width:475.75; height:356.8125; left:475.75*0; top:356.8125*1;        
+                           2행 1열 width:475.75; height:356.8125; left:475.75*1; top:356.8125*1;
+                           2행 1열 width:475.75; height:356.8125; left:475.75*2; top:356.8125*1;        
+                           2행 1열 width:475.75; height:356.8125; left:475.75*3; top:356.8125*1;        
+                            
+
+                        // 3열인 경우 줄수는  8개이미지/3열 = 자리올림수Math.ceil(2.666666...) = 3행
+                        // 부모요소의$('gallery-container') 높이는 자식요소$('gallery-item')의 높이 634.3333333*3줄수
+                           1행 1칸 width:634.3333333; height:475.75; left:634.3333333*0; top:475.75*0;         
+                           1행 2칸 width:634.3333333; height:475.75; left:634.3333333*1; top:475.75*0;   
+                           1행 3칸 width:634.3333333; height:475.75; left:634.3333333*2; top:475.75*0;      
+                            
+                           2행 1칸 width:634.3333333; height:475.75; left:634.3333333*0; top:475.75*1;         
+                           2행 2칸 width:634.3333333; height:475.75; left:634.3333333*1; top:475.75*1;   
+                           2행 3칸 width:634.3333333; height:475.75; left:634.3333333*2; top:475.75*1;      
+                            
+                           3행 1칸 width:634.3333333; height:475.75; left:634.3333333*0; top:475.75*2;         
+                           3행 2칸 width:634.3333333; height:475.75; left:634.3333333*1; top:475.75*2;   
+                           3행 3칸 width:634.3333333; height:475.75; left:634.3333333*2; top:475.75*2;      
 
 
+                        // 2열인 경우 줄수는  8개이미지/2열 = 자리올림수Math.ceil(4) = 4행
+                        // 부모요소의$('gallery-container') 높이는 자식요소$('gallery-item')의 높이 713.625*4줄수
+                           1행 1열 width:951.5; height:713.625; left:951.5*0; top:713.625*0;         
+                           1행 2열 width:951.5; height:713.625; left:951.5*0; top:713.625*0;
+
+                           2행 1열 width:951.5; height:713.625; left:951.5*0; top:713.625*1;         
+                           2행 2열 width:951.5; height:713.625; left:951.5*0; top:713.625*1;
+
+                           3행 1열 width:951.5; height:713.625; left:951.5*0; top:713.625*2;         
+                           3행 2열 width:951.5; height:713.625; left:951.5*0; top:713.625*2;
+
+                           4행 1열 width:951.5; height:713.625; left:951.5*0; top:713.625*3;         
+                           4행 2열 width:951.5; height:713.625; left:951.5*0; top:713.625*3;
+                           
+                           
+                        // 1열인 경우 줄수는  8개이미지/1열 = 자리올림수Math.ceil(8) = 8행
+                        // 부모요소의$('gallery-container') 높이는 자식요소$('gallery-item')의 높이 1427.25*8줄수
+                           1행 1열 width:1903; height:1427.25; left:1903*0; top:1427.25*0;         
+                           2행 2열 width:1903; height:1427.25; left:1903*0; top:1427.25*1;
+                           3행 2열 width:1903; height:1427.25; left:1903*0; top:1427.25*2;
+                           4행 2열 width:1903; height:1427.25; left:1903*0; top:1427.25*3;
+                           5행 2열 width:1903; height:1427.25; left:1903*0; top:1427.25*4;
+                           6행 2열 width:1903; height:1427.25; left:1903*0; top:1427.25*5;
+                           7행 2열 width:1903; height:1427.25; left:1903*0; top:1427.25*6;
+                           8행 2열 width:1903; height:1427.25; left:1903*0; top:1427.25*7;
+
+                           
+                           
+
+         부모요소의 너비 : 화면의 100%; 너비 사용
+         부모요소의 너비 : 자식요소의 줄수에 따라 반응하도록
+*/
 
 
 /* 섹션10  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */
@@ -375,11 +474,32 @@
 #wrap #main #section13 .wrap .gap .container{height:200px;/* 임시 */width:100%;}
 
 
+
+
+
+
+
+
+
+
 /* 섹션14  부모 영역의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다 */
 #wrap #main #section14{position:relative;width:100%;height:auto;padding:130px 0; background: #bd9;}
 #wrap #main #section14 .wrap{width:100%;max-width:1170px;height:auto;margin:0 auto;}
 #wrap #main #section14 .wrap .gap{width:100%;}
 #wrap #main #section14 .wrap .gap .container{height:640px;/* 임시 */width:100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

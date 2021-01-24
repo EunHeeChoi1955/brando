@@ -189,41 +189,288 @@
             });
             },
             section09Fn:function(){
-              
-                var $window      = $(window); 
-                var imgW         = $('#main #section09 .gallery-item').innerWidth(); // 갤러리이미지 박스 너비
-                var $galleryItem = $('#main #section09 .gallery-item'); //이미지박스  
-                var per          = 0.75;
-                var imgH         = imgW * per; //이미지 박스의 높이
-                    $galleryItem.css({ hegiht: imgH });
-                var $gllBtn      = $('.gll-btn');     
-                
-                
-                
-                //이미지 너비에 따라 높이의 변화
-                //이미지 박스높이 = 이미지 박스의 너비 * 0.75%
+              var n = $('#main #section09 .gallery-item').length;//전체갤러리 갯수
+              var cols = 4;//기본칸수
+              var imgW = 0;//이미지너비
+              var imgH = imgW*0.75;//이미지 높이
+              var rows = Math.ceil(n/cols);//줄수
+              var $gllBtn = $('#main #section09 .gll-btn');
+              var idx = 0;
+
+                    //갤러리 반응형함수
                     function resizeFn(){
-                        imgW  = $('#main #section09 .gallery-item').innerWidth();
-                        imgH  =  imgW * per;
-                        $galleryItem.css({ height: imgH });
-                        
-                    }
-                    resizeFn();//로딩시 1회 실행
-                    $window.resize(function(){    //반응형 높이 넓이 변경시마다 계속사용
-                        resizeFn(); 
-                    });
 
-
-
-                    //갤러리 버튼 클릭 이벤트
-                    $gllBtn.on({
-                        click: function(){
-                            var $this = $(this);
-                            $gllBtn.removeClass('addNav');
-                            $this.addClass('addNav');
+                        if($(window).innerWidth()>1200){
+                            cols=4;
                         }
-                    });
+                        else if($(window).innerWidth()>=990){
+                            cols=3;
+                        }
+                        else if($(window).innerWidth()>760){
+                            cols=2;
+                        }
+                        else{
+                            cols=1;
+                        }
 
+                        imgW = $(window).innerWidth()/cols;
+                        imgH = imgW*.75;
+                        
+                         
+                       
+                        
+                        $('#main #section09 .gallery-item').removeClass('addScale');
+                       
+                        $('#main #section09 .gallery-item').css({width:imgW, height:imgH});   //갤러리 이미지 너비 높이 구함
+                       
+                     
+                     
+                            switch( idx ){
+                              case  0:  //all 8개
+                                    n = 8 - 0;//총갯수 = 총갯수-감춰진갯수
+                                    if(cols==4){
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(2).stop().show().animate({left:imgW*2,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*3,top:imgH*0});
+    
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*1,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*2,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*3,top:imgH*1});
+    
+                                    }
+                                    else if(cols==3){
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(2).stop().show().animate({left:imgW*2,top:imgH*0});
+
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*1,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*2,top:imgH*1});
+
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*2});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*1,top:imgH*2});
+    
+                                    }
+                                    else if(cols==2){
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*1,top:imgH*0});
+
+                                        $('#main #section09 .gallery-item').eq(2).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*1,top:imgH*1});
+
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*0,top:imgH*2});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*1,top:imgH*2});
+
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*3});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*1,top:imgH*3});
+                                    }
+                                    else{
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(2).stop().show().animate({left:imgW*0,top:imgH*2});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*0,top:imgH*3});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*0,top:imgH*4});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*0,top:imgH*5});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*6});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*0,top:imgH*7});
+                                    }
+                                
+                                
+                                break;  
+                              case  1://Breakfast 6개 0, 2 delect
+                                     n = 8 - 2;//총갯수 = 총갯수-감춰진갯수
+                                    $('#main #section09 .gallery-item').eq(0).stop().hide();
+                                    $('#main #section09 .gallery-item').eq(2).stop().hide();
+
+                                   
+                                    if(cols==4){
+                                     
+
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*2,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*3,top:imgH*0});
+
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*1,top:imgH*1});
+                                    }
+                                    else if(cols==3){
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*2,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*1,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*2,top:imgH*1});
+                                    }
+                                    else if(cols==3){
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*1,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*2});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*1,top:imgH*2});
+                                    }
+                                    else{
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*0,top:imgH*2});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*0,top:imgH*3});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*4});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*0,top:imgH*5});
+                                    }
+                                
+                                    break;  
+                              case  2:
+                                   n = 8 - 4;//총갯수 = 총갯수-감춰진갯수
+                                    $('#main #section09 .gallery-item').eq(1).stop().hide();
+                                    $('#main #section09 .gallery-item').eq(3).stop().hide();
+                                    $('#main #section09 .gallery-item').eq(4).stop().hide();
+                                    $('#main #section09 .gallery-item').eq(5).stop().hide();
+                                   
+                                 
+                                    if(cols==4){
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(2).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*2,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*3,top:imgH*0});
+                                    }
+                                    else if(cols==3){
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(2).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*2,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*0,top:imgH*1});
+                                    }
+                                    else if(cols==2){
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(2).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*1,top:imgH*1});
+                                    }
+                                    else{
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(2).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*2});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*0,top:imgH*3});
+                                    }
+                                
+                                
+                                    break;  
+                              case  3:
+                                     n = 8 - 3;//총갯수 = 총갯수-감춰진갯수
+                                    $('#main #section09 .gallery-item').eq(0).stop().hide();
+                                    $('#main #section09 .gallery-item').eq(2).stop().hide();
+                                    $('#main #section09 .gallery-item').eq(5).stop().hide();
+                                    
+                                
+                                    
+                                    if(cols==4){
+                                        
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*2,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*3,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*0,top:imgH*1});
+                                    }
+                                    else if(cols==3){
+                                        
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*2,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*1,top:imgH*1});
+                                    }
+                                    else if(cols==2){
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*1,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*0,top:imgH*2});
+                                    }
+                                    else{
+                                        $('#main #section09 .gallery-item').eq(1).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(3).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*0,top:imgH*2});
+                                        $('#main #section09 .gallery-item').eq(6).stop().show().animate({left:imgW*0,top:imgH*3});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*0,top:imgH*4});
+                                    }
+                               
+                                break;  
+                             default:
+                                    n = 8 - 4;//총갯수 = 총갯수-감춰진갯수
+                                    $('#main #section09 .gallery-item').eq(0).stop().hide();
+                                    $('#main #section09 .gallery-item').eq(1).stop().hide();
+                                    $('#main #section09 .gallery-item').eq(3).stop().hide();
+                                    $('#main #section09 .gallery-item').eq(6).stop().hide();
+                              
+                                
+                                    if(cols==4){
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*2,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*3,top:imgH*0}); 
+                                    }
+                                    else if(cols==3){
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*2,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*0,top:imgH*1});
+                                    }
+                                    else if(cols==2){
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*1,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*1,top:imgH*1});
+                                    }
+                                    else{
+                                        $('#main #section09 .gallery-item').eq(0).stop().show().animate({left:imgW*0,top:imgH*0});
+                                        $('#main #section09 .gallery-item').eq(4).stop().show().animate({left:imgW*0,top:imgH*1});
+                                        $('#main #section09 .gallery-item').eq(5).stop().show().animate({left:imgW*0,top:imgH*2});
+                                        $('#main #section09 .gallery-item').eq(7).stop().show().animate({left:imgW*0,top:imgH*3});
+                                    }
+
+
+                            }//switch() 끝
+
+                            //항상 switch문 끝나는 밑에해야 전체줄수 읽을 수 있음
+                            rows = Math.ceil(n/cols); 
+                            $('#main #section09 .gallery-container').css({height:imgH*rows});    //갤러리 전체박스 높이를 구함
+                            console.log(rows);
+
+
+                            $('#main #section09 .gallery-item').addClass('addScale');
+
+                        }//resizeFn()끝
+                        
+                        
+
+
+                        $(window).resize(function(){
+                            resizeFn();//첫실행때 반응형시 갤러리 사진 보임
+                        });
+                        resizeFn();//평상시에 갤러리 사진보임
+
+
+
+                    //갤러리 네비게이션 버튼 클릭 이벤트
+                     $gllBtn.each(function(index){
+                        $(this).on({
+                            click: function(event){
+                                event.preventDefault();
+                                $gllBtn.removeClass('addNav');
+                                $(this).addClass('addNav');
+                                
+                               
+
+                             idx = index;   //switch() 변수idx에 버튼번호 index를전달   
+                            resizeFn();
+
+                        } //click event 끝
+                    });
+                });
+
+                        
             },
             section10Fn:function(){
 
