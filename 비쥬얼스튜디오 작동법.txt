@@ -15,7 +15,16 @@ shift + alt + ctrl : 글자여러개 수정할때
 
 ctrl+ H : 한번에 바꿀때 사용 
 shift+ alt + B ->firefox 웹 브라우저 선택 가능
+--------비쥬얼에서 깃텁 업로드하기-----------
 ctrl + `  : 누르면 터미널 창이 뜬다
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git drs
+PS D:\주말반_최은희\210131_브란도_레스토랑_반응형포트폴리오> git add .
+PS D:\주말반_최은희\210131_브란도_레스토랑_반응형포트폴리오> git commit -m 'update'
+PS D:\주말반_최은희\210131_브란도_레스토랑_반응형포트폴리오> git push origin master
+
+쓰면 끝
 
 
 
