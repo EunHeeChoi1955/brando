@@ -402,17 +402,17 @@
 #wrap #main #section13 .wrap .gap {width:100%;}
 #wrap #main #section13 .wrap .gap .container {width:100%;}
 #wrap #main #section13 .wrap .gap .container ul {width:100%;}
-#wrap #main #section13 .wrap .gap .container ul li {float: left;width: 25%;}
+#wrap #main #section13 .wrap .gap .container ul li {float:left;width:25%;}
 #wrap #main #section13 .wrap .gap .container ul li div {border-right:1px solid rgba(0,0,0,0.1);text-align:center;}
 #wrap #main #section13 .wrap .gap .container ul li:last-child div {border:0;}
-#wrap #main #section13 .wrap .gap .container ul li div h2 {font-size:35px;color:#614c45;font-weight: 600;font-family:'Montserrat';}
+#wrap #main #section13 .wrap .gap .container ul li div h2 {font-size:35px;color:#614c45;font-weight:600;font-family:'Montserrat';}
 #wrap #main #section13 .wrap .gap .container ul li div h3 {font-size:11px;color:#626262;padding:15px 0 15px 0;font-weight:600;font-family:'Montserrat';}
-#wrap #main #section13 .wrap .gap .container ul li div span {display: block;}
+#wrap #main #section13 .wrap .gap .container ul li div span {display:block;}
 #wrap #main #section13 .wrap .gap .container ul li div span i {font-size:25px;color:#c8a64b;}
 
 
 /* 조상 영역들의 높이를 마지막 자손영역의 높이(내용물의 높이에 따라서)가 결정한다. */
-#wrap #main #section14 {position:relative;width:100%;height:auto;padding:130px 0;background:#bd9}
+#wrap #main #section14 {position:relative;width:100%;height:auto;padding:130px 0;background:#bd9;}
 #wrap #main #section14 .wrap {width:100%;max-width:1170px;height:auto;margin:0 auto;}
 #wrap #main #section14 .wrap .gap {width:100%;}
 #wrap #main #section14 .wrap .gap .container {width:100%;height:640px;/* 임시높이 */}
