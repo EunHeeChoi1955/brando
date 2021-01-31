@@ -14,8 +14,14 @@ css에서는 ctrl +/  : /* */
 shift + alt + ctrl : 글자여러개 수정할때
 
 ctrl+ H : 한번에 바꿀때 사용 
+shift+ alt + B ->firefox 웹 브라우저 선택 가능
+ctrl + `  : 누르면 터미널 창이 뜬다
 
 
+
+
+웹브라우저 크롬에서 적용
+ctrl + shift + R -> F5 대신 사용/ 캐쉬다 지우고 적용하는거 
 
 
 h2{Discover our tasty meals}^h3>img
